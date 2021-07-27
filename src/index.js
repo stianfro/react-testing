@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import useSWR from "swr";
 
 // function formatName(user) {
 //   return user.firstName + " " + user.lastName;
@@ -106,45 +107,79 @@ import ReactDOM from "react-dom";
 //   document.getElementById("root")
 // );
 
-class Clock extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      date: new Date(),
-    };
-  }
+// class Clock extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = {
+//       date: new Date(),
+//     };
+//   }
 
-  componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
-  }
+//   componentDidMount() {
+//     this.timerID = setInterval(() => this.tick(), 1000);
+//   }
 
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
+//   componentWillUnmount() {
+//     clearInterval(this.timerID);
+//   }
 
-  tick() {
-    this.setState({
-      date: new Date(),
-    });
-  }
+//   tick() {
+//     this.setState({
+//       date: new Date(),
+//     });
+//   }
 
-  render() {
-    return (
-      <div>
-        <h2>It is {this.state.date.toLocaleTimeString()}</h2>
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div>
+//         <h2>It is {this.state.date.toLocaleTimeString()}</h2>
+//       </div>
+//     );
+//   }
+// }
 
-function App(props) {
-  return (
-    <div>
-      <Clock />
-      <Clock />
-      <Clock />
-    </div>
-  );
-}
+// function App(props) {
+//   return (
+//     <div>
+//       <Clock />
+//       <Clock />
+//       <Clock />
+//     </div>
+//   );
+// }
 
-ReactDOM.render(<App />, document.getElementById("root"));
+// ReactDOM.render(<App />, document.getElementById("root"));
+
+// function Form() {
+//   function handleSubmit(e) {
+//     e.preventDefault();
+//     console.log("You clicked submit.");
+//   }
+
+//   return (
+//     <form onSubmit={handleSubmit}>
+//       <button type="submit">Submit</button>
+//     </form>
+//   );
+// }
+
+// ReactDOM.render(<Form />, document.getElementById("root"));
+
+// class Toggle extends React.Component {
+//   constructor(props) {
+//     super(props);
+//     this.state = { isToggleOn: true };
+
+//     this.handleClick = this.handleClick.bind(this);
+//   }
+
+//   handleClick() {
+//     this.setState
+//   }
+
+//   render() {
+//     return <button></button>;
+//   }
+// }
+
+// ReactDOM.render(<Toggle />, document.getElementById("root"));
